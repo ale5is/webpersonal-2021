@@ -1,10 +1,14 @@
 from django.contrib import admin
 from django.urls import path
 from core import views
+from Portfolio.views import portfolio
 from django.conf import settings
 
 urlpatterns = [
-    path('', views.base, name='base'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('portfolio/', portfolio, name='portfolio'),
+    path('contact/', views.contact, name='contact'),
     path('admin/', admin.site.urls),
 ]
 
